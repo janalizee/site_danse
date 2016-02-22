@@ -1,0 +1,55 @@
+@font-normal     : 23px;
+@font-large      : unit((32px / @font-normal), em);
+@font-small      : unit((18px / @font-normal), em);
+@color-text      : #1D1F20;
+
+@font-root       : 16px;
+@column-width    : unit((96px / @font-root), rem);
+@gutter-width    : unit((36px / @font-root), rem);
+
+@device-width-medium : unit((1024px/@font-root), em);
+
+// wrapper
+.wrapper(@cols)
+{
+	width: @column-width * @cols;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.column(@cols)
+{
+  
+}
+
+/** Texte **/
+body
+{
+	font: unit((@font-normal / @font-root * 100), %)/1.5em Georgia, Serif;
+	color: @color-text;
+}
+h1
+{
+	font-size: 3em;
+	font-weight: bold;
+	line-height: 1.2em;
+	margin-bottom: 1em;
+}
+h2
+{
+	&:extend(h1);
+	font-size: 2em;
+}
+p
+{
+	margin-bottom: 1.5em;
+}
+
+.banner
+{
+  .wrapper(12);
+}
+
+@media(min-width:@device-width-medium){
+
+}
